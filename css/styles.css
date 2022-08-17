@@ -1,0 +1,296 @@
+:root
+{
+    --primary-color: #2E6AC3;
+    --primary-color-dark: #142D52;
+}
+
+*,
+*::after,
+*::before
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    font-family: 'Mulish', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+ul
+{
+    list-style: none;
+}
+
+a
+{
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+/* HEADER and NAVIGATION */
+
+.header
+{
+    height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.25);
+    z-index: 100;
+}
+
+.navigation
+{
+    position: absolute;
+    top: 72px;
+    background: var(--primary-color);
+    padding: 1rem;
+    width: 100%;
+    max-width: 450px;
+    box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 0 0 4px 4px;
+}
+
+.nav-container
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.2rem;
+}
+
+.nav-item
+{
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.nav-item a:hover
+{
+    color: #69a0f1;
+}
+
+/* ABOUT and BANNER */
+
+.banner
+{
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    background: url(../assets/img/airplane.gif) no-repeat center center;
+    background-size: cover;
+    position: relative;
+}
+
+.overlay
+{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.banner h2
+{
+    position: absolute;
+    color: white;
+    font-size: 2.2rem;
+}
+
+/* TREE SKILLS */
+
+.section-container
+{
+    padding: 4rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-title 
+{
+    display: inline-block;
+    align-self: flex-start;
+    justify-self: flex-start;
+    margin-bottom: 1rem;
+}
+
+.section-title img
+{
+    width: 142px;
+}
+
+.divider
+{
+    width: 100%;
+    max-width: 800px;
+    height: 2px;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.skills-container
+{
+    width: 100%;
+    max-width: 800px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background: url("../assets/Root.svg") no-repeat;
+    background-position: center 85%;
+}
+
+.base-skills
+{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.first-base
+{
+}
+
+.skill
+{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    transition: 0.3s;
+    cursor: pointer;
+    position: relative;
+}
+
+.skill:hover
+{
+    transform: scale(1.1);
+}
+
+.skill:hover::after
+{
+    content: "" attr(title) "";
+    position: absolute;
+    top: -120%;
+    left: 50%;
+    padding:  0.5rem 1rem;
+    border-radius: 4px;
+    border: 2px solid var(--primary-color-dark);
+    background: white;
+    font-size: 0.8rem;
+}
+
+.base-items
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 1.9rem;
+}
+.middle-skill
+{
+    width: 3rem;
+}
+
+.disabled-skill
+{
+    background-color: #B2B2B2;
+}
+
+.top-skill
+{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 2px solid rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+
+.top-skill:hover
+{
+    transform: scale(1.1);
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.top-skill:hover::after
+{
+    content: "" attr(title) "";
+    position: absolute;
+    top: -80%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding:  0.5rem 1rem;
+    border-radius: 4px;
+    border: 2px solid var(--primary-color-dark);
+    background: white;
+    color: #000;
+    font-size: 0.8rem;
+}
+
+/* SKILLS LOGO */
+
+#html5
+{
+    background-color: #e34f26;
+}
+
+#css3
+{
+    background-color: #214CE5;
+}
+
+#bootstrap
+{
+    background-color: #7B11F8;
+}
+
+#javascript
+{
+    background-color: #F0DB4F;
+}
+
+#react
+{
+    background-color: #282C34;
+}
+
+#handlebars
+{
+    background-color: #F0772B;
+}
+
+#nestjs
+{
+    background-color: #000;
+}
+
+@media (max-width: 800px) {
+    .skills-container
+    {
+        display: none;
+    }
+}
