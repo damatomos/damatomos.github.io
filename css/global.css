@@ -128,7 +128,7 @@ a
 
 .navigation-mobile
 {
-  position: absolute;
+  position: fixed;
   top: calc(-100vh + 56px);
   left: 0;
 
@@ -137,6 +137,8 @@ a
   align-items: center;
   justify-content: flex-start;
   gap: 2rem;
+  background-color: var(--background);
+  z-index: 100;
 
   width: 100%;
   padding: 1rem 2rem;
