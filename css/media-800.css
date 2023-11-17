@@ -1,0 +1,31 @@
+@media (max-width: 800px) {
+  
+
+  /* -------- Header -------- */
+
+  .header
+  {
+  }
+
+  .header .container
+  {
+  }
+
+  .navigation
+  {
+    display: none;
+  }
+
+  .header .menu-button
+  {
+    display: flex;
+  }
+
+  .header .navigation-mobile
+  {
+    display: flex;
+  }
+
+  /* -------- End Header -------- */
+
+}
