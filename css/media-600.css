@@ -1,0 +1,18 @@
+@media (max-width: 600px) {
+    
+  /* -------- About -------- */
+
+  .title
+  {
+    font-size: 3rem;
+    min-height: 64px;
+  }
+
+  .title::after
+  {
+    height: 60px;
+  }
+
+  /* -------- End About -------- */
+  
+}

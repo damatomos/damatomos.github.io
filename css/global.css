@@ -128,7 +128,7 @@ a
 
 .navigation-mobile
 {
-  position: absolute;
+  position: fixed;
   top: calc(-100vh + 56px);
   left: 0;
 
@@ -137,6 +137,8 @@ a
   align-items: center;
   justify-content: flex-start;
   gap: 2rem;
+  background-color: var(--background);
+  z-index: 100;
 
   width: 100%;
   padding: 1rem 2rem;
@@ -220,6 +222,7 @@ a
   gap: 1.5rem;
   align-items: center;
   justify-content: center;
+  padding: 1rem;
 }
 
 .title
@@ -229,7 +232,7 @@ a
   font-size: 4rem;
   letter-spacing: 10%;
   text-align: center;
-  height: 77px;
+  min-height: 77px;
 }
 
 .title::after
@@ -237,7 +240,7 @@ a
   position: absolute;
   content: '';
   width: 8px;
-  height: 80%;
+  height: 70px;
   top: 0;
   right: -10px;
   background-color: var(--blue);
