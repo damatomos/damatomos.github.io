@@ -21,7 +21,7 @@ menuButton.addEventListener("click", (e) => {
 function updateHomeTitle() {
 	const titleList = [
 		"All For One",
-		"Full Stack Developer",
+		"Full Stack",
 		"Front-End",
 		"Back-End",
 		"Game Dev",
