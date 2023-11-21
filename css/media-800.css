@@ -29,6 +29,25 @@
   /* -------- End Header -------- */
 
   
+  /* -------- Description -------- */
+
+  .description .container
+  {
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+
+    gap: 2rem;
+
+    padding: 4rem 0;
+  }
+
+  .description h2
+  {
+    text-align: center;
+  }
+
+  /* -------- End Description -------- */
   
   /* -------- Footer -------- */
 
