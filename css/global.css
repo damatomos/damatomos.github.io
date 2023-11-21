@@ -3,6 +3,7 @@
   --black: #333;
   --white: #F0F7F9;
   --gray: #8F8F8F;
+  --gray-100: #E6EDF0;
   --blue: #5E7DE9;
   --blue-100: #DCE9F0;
   --blue-300: #C6DEEC;
@@ -528,3 +529,126 @@ a
 }
 
 /* -------- End Technologies -------- */
+
+/* -------- Footer -------- */
+
+footer
+{
+  width: 100%;
+  padding: 5rem 2rem;
+
+  background-color: var(--gray-100);
+}
+
+footer .container
+{
+  margin: 0 auto;
+  max-width: 1280px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+footer .left img
+{
+  height: 32px;
+}
+
+footer .container .left
+{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+footer .container .icons
+{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+
+  padding: 2rem 0;
+  padding-bottom: 3rem;
+}
+
+footer .icons span
+{
+  cursor: pointer;
+}
+
+footer .icons span rect
+{
+  fill: var(--white);
+  transition: 0.2s;
+}
+
+footer .icons span path
+{
+  fill: var(--black);
+  transition: 0.2s;
+}
+
+footer .icons span:hover rect
+{
+  fill: var(--blue);
+}
+
+footer .icons span:hover path
+{
+  fill: var(--white);
+}
+
+footer .copyright
+{
+  font-weight: var(--font-normal);
+  font-size: 1rem;
+  letter-spacing: 0.8px;
+}
+
+footer .right
+{
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 2rem;;
+}
+
+footer .right h4
+{
+  font-weight: var(--font-bold);
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  text-align: left
+}
+
+footer .right .column
+{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 2rem;
+}
+
+footer .right .links
+{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  text-align: left;
+  gap: 1rem;
+}
+
+
+footer a:hover
+{
+  text-decoration: underline;
+  color: var(--blue);
+}
+
+/* -------- End Footer -------- */

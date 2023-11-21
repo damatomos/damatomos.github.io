@@ -28,8 +28,8 @@ function createCard() {
   card.appendChild(image);
 	carousel.appendChild(card);
 	cardList.push(card);
-  card.addEventListener('mouseenter', () => { running = false });
-  card.addEventListener('mouseleave', () => { running = true; });
+  // card.addEventListener('mouseenter', () => { running = false });
+  // card.addEventListener('mouseleave', () => { running = true; });
 }
 
 function anim(card, dt) {
