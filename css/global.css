@@ -2,7 +2,8 @@
 {
   --black: #333;
   --white: #F0F7F9;
-  --gray: #E6EDF0;
+  --gray: #8F8F8F;
+  --gray-100: #E6EDF0;
   --blue: #5E7DE9;
   --blue-100: #DCE9F0;
   --blue-300: #C6DEEC;
@@ -286,8 +287,11 @@ a
 .description
 {
   width: 100%;
-  height: 400px;
+  min-height: 400px;
   background-color: var(--blue-100);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .description h2
@@ -323,3 +327,331 @@ a
 }
 
 /* -------- End Description -------- */
+
+/* -------- Timeline -------- */
+
+.timeline
+{
+  width: 100%;
+  padding: 0 1rem;
+}
+
+.timeline .container
+{
+  position: relative;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 3.75rem 1rem;
+}
+
+.timeline h2
+{
+  font-weight: var(--font-extrabold);
+  font-size: 2.5rem; /* 40px */
+  letter-spacing: 4px;
+  text-align: center;
+  margin-bottom: 3.75rem;
+}
+
+.timeline .sidebar
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10px;
+  height: 100%;
+  background: linear-gradient(180deg, #DCE9F0 59.9%, rgba(220, 233, 240, 0.00) 100%);
+}
+
+.timeline .items
+{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.timeline .item
+{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2rem;
+  padding: 3.75rem 2rem;
+}
+
+.timeline .item .circle
+{
+  position: relative;
+  width: 40px;
+  height: 40px;
+
+  border-radius: 50%;
+  border: 3px solid var(--blue-300);
+
+  aspect-ratio: 1/1;
+}
+
+.timeline .item .circle::after
+{
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  width: 20px;
+  height: 20px;
+  background-color: var(--blue-300);
+
+  border-radius: 50%;
+}
+
+.timeline .item .content
+{
+  border: 3px solid var(--blue-300);
+  border-radius: 10px;
+
+  background-color: var(--white);
+
+  box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.10);
+  padding: 1rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 10px;
+
+  width: 60%;
+  min-width: 300px;
+}
+
+.timeline .role
+{
+  font-weight: var(--font-medium);
+  font-size: 1.2rem;
+  line-height: 1;
+  letter-spacing: 2px;
+  text-align: left;
+}
+
+.timeline .enterprise
+{
+  font-weight: var(--font-extrabold);
+  font-size: 1.2rem;
+  line-height: 1;
+  letter-spacing: 2px;
+  text-align: left;
+}
+
+.timeline .office
+{
+  font-weight: var(--font-medium);
+  font-size: 1rem;
+  line-height: 1;
+  letter-spacing: 2px;
+  text-align: left;
+}
+
+.timeline .period
+{
+  font-weight: var(--font-medium);
+  font-size: 1rem;
+  line-height: 1;
+  letter-spacing: 2px;
+  text-align: left;
+  color: var(--gray);
+  padding-top: 14px;
+}
+
+/* -------- End Timeline -------- */
+
+
+/* -------- Technologies -------- */
+.technologies
+{
+  width: 100%;
+}
+
+.technologies h2
+{
+  font-weight: var(--font-extrabold);
+  font-size: 2.5rem; /* 40px */
+  letter-spacing: 4px;
+  text-align: center;
+}
+
+.technologies .carousel
+{
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  overflow: hidden;
+  min-height: 300px;
+}
+
+.technologies .carousel .card
+{
+  position: absolute;
+  width: 128px;
+  height: 128px;
+
+  top: 50%;
+  transform: translateY(-50%);
+
+  background-color: var(--white);
+  border: 0.5px solid rgba(0, 0, 0, 0.12);
+  box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.12);
+
+  border-radius: 6px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+}
+
+
+.technologies .carousel .card:hover
+{
+  transform: translateY(-50%) scale(1.1);
+}
+
+.technologies .carousel img
+{
+  width: 60px;
+  max-height: 60px;
+}
+
+/* -------- End Technologies -------- */
+
+/* -------- Footer -------- */
+
+footer
+{
+  width: 100%;
+  padding: 5rem 2rem;
+
+  background-color: var(--gray-100);
+}
+
+footer .container
+{
+  margin: 0 auto;
+  max-width: 1280px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+footer .left img
+{
+  height: 32px;
+}
+
+footer .container .left
+{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+footer .container .icons
+{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+
+  padding: 2rem 0;
+  padding-bottom: 3rem;
+}
+
+footer .icons span
+{
+  cursor: pointer;
+}
+
+footer .icons span rect
+{
+  fill: var(--white);
+  transition: 0.2s;
+}
+
+footer .icons span path
+{
+  fill: var(--black);
+  transition: 0.2s;
+}
+
+footer .icons span:hover rect
+{
+  fill: var(--blue);
+}
+
+footer .icons span:hover path
+{
+  fill: var(--white);
+}
+
+footer .copyright
+{
+  font-weight: var(--font-normal);
+  font-size: 1rem;
+  letter-spacing: 0.8px;
+}
+
+footer .right
+{
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 2rem;;
+}
+
+footer .right h4
+{
+  font-weight: var(--font-bold);
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  text-align: left
+}
+
+footer .right .column
+{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 2rem;
+}
+
+footer .right .links
+{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  text-align: left;
+  gap: 1rem;
+}
+
+
+footer a:hover
+{
+  text-decoration: underline;
+  color: var(--blue);
+}
+
+/* -------- End Footer -------- */
