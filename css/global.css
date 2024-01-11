@@ -239,7 +239,7 @@ a
   min-height: 77px;
 }
 
-.title::after
+.initial.title::after
 {
   position: absolute;
   content: '';
