@@ -16,4 +16,57 @@
   /* -------- End About -------- */
 
   
+  /* -------- Description -------- */
+
+  .description h2
+  {
+    padding: 0 1rem;
+  }
+
+  /* -------- End Description -------- */
+
+  
+  /* -------- Timeline -------- */
+
+  .timeline .sidebar
+  {
+    z-index: -1;
+  }
+
+
+  .timeline .item
+  {
+    padding: 0;
+  }
+
+  .timeline .item
+  {
+    gap: 10px;
+  }
+
+  .timeline .item .circle
+  {
+    width: 20px;
+    height: 8px;
+
+    border: none;
+    border-radius: 2px;
+
+    background-color: var(--blue-300);
+  }
+
+  .timeline .item .circle::after
+  {
+    display: none;
+  }
+
+  .timeline .item .content
+  {
+    min-width: auto;
+    width: 100%;
+  }
+
+  /* -------- End Timeline -------- */
+
+
 }
