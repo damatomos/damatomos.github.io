@@ -4,10 +4,15 @@
   --white: #F0F7F9;
   --gray: #8F8F8F;
   --gray-100: #E6EDF0;
+
   --blue: #5E7DE9;
   --blue-100: #DCE9F0;
   --blue-300: #C6DEEC;
   --blue-900: #3B5AC6;
+
+  --orange: #c6503b;
+
+  --purple: #873bc6;
 
   --font-family: 'Alegreya Sans', sans-serif;
   --background: #F0F7F9;
@@ -56,6 +61,25 @@ a
   text-decoration: none;
   color: var(--black);
 }
+
+/* -------- Colors -------- */
+
+.purple
+{
+  color: var(--purple);
+}
+
+.blue
+{
+  color: var(--blue-900);
+}
+
+.orange
+{
+  color: var(--orange);
+}
+
+/* -------- End Colors -------- */
 
 /* -------- Header -------- */
 
@@ -239,7 +263,7 @@ a
   min-height: 77px;
 }
 
-.initial.title::after
+.title::after
 {
   position: absolute;
   content: '';
@@ -395,6 +419,32 @@ a
   aspect-ratio: 1/1;
 }
 
+.timeline .item:first-child .circle::after
+{ 
+  animation: circleExpand 1.5s ease-in-out infinite;
+}
+
+@keyframes circleExpand {
+  0% {
+    background-color: var(--blue-300);
+    transform: translate(-50%, -50%) scale(0.2);
+  }
+  60%
+  {
+    transform: translate(-50%, -50%) scale(1.8);
+    background-color: var(--white);
+  }
+  80%
+  {
+    background-color: var(--white);
+    transform: translate(-50%, -50%) scale(0.2);
+  }
+  100%
+  {
+    background-color: var(--white);
+  }
+}
+
 .timeline .item .circle::after
 {
   content: '';
@@ -429,6 +479,26 @@ a
 
   width: 60%;
   min-width: 300px;
+}
+
+.timeline .item:first-child .content
+{
+  animation: sizeAnim 1.4s ease-in-out infinite;
+}
+
+@keyframes sizeAnim
+{
+  0% {
+    transform: translateY(8px);
+  }
+  50%
+  {
+    transform: translateY(-8px);
+  }
+  100%
+  {
+    transform: translateY(8px);
+  }
 }
 
 .timeline .role
