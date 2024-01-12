@@ -665,6 +665,13 @@ footer .icons span path
   transition: 0.2s;
 }
 
+footer .icons span.tabnews path
+{
+  fill: var(--black);
+  transition: 0.2s;
+  transform: translate(4px, 4px);
+}
+
 footer .icons span:hover rect
 {
   fill: var(--blue);
@@ -725,3 +732,32 @@ footer a:hover
 }
 
 /* -------- End Footer -------- */
+
+/* -------- Data Title -------- */
+[data-title]:hover:after {
+  opacity: 1;
+  transition: all 0.1s ease 0.5s;
+  visibility: visible;
+}
+[data-title]:after {
+  content: attr(data-title);
+  background-color: var(--blue);
+  border-radius: 4px;
+  color: var(--white);
+  font-weight: var(--font-bold);
+  font-size: 120%;
+  position: absolute;
+  padding: 0.2rem 0.6rem;
+  bottom: -1.6em;
+  left: 100%;
+  white-space: nowrap;
+  opacity: 0;
+  border: none;
+  z-index: 99999;
+  visibility: hidden;
+}
+[data-title] {
+  position: relative;
+}
+
+/* -------- End Data Title -------- */

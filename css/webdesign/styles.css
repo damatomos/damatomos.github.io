@@ -68,6 +68,16 @@
   gap: 1rem;
 
   margin-top: 2rem;
+
+  transition: 0.24s;
+
+  line-height: 1;
+}
+
+.webdesign .content a:hover
+{
+  background-color: var(--black);
+  transform: scale(1.02);
 }
 
 .webdesign .content p

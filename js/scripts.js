@@ -3,6 +3,8 @@ const menuButton = document.querySelector(".menu-button");
 const navigationMobile = document.querySelector(".navigation-mobile");
 const title = document.querySelector(".title");
 
+const copyright = document.querySelector("#copyright");
+
 var cleaning = true;
 var textHomeTitle = "All For One";
 
@@ -57,3 +59,11 @@ function updateHomeTitle() {
 		}
 	}, 100);
 }
+
+function initCopyRight()
+{
+	let year = new Date().getFullYear();
+	copyright.textContent = `Copyright © ${year} by damatomos`
+}
+
+initCopyRight();
