@@ -5,10 +5,10 @@
   --gray: #8F8F8F;
   --gray-100: #E6EDF0;
 
-  --blue: #5E7DE9;
+  --blue: #003f86;
   --blue-100: #DCE9F0;
   --blue-300: #C6DEEC;
-  --blue-900: #3B5AC6;
+  --blue-900: rgb(48, 73, 160);
 
   --orange: #c6503b;
 
@@ -312,10 +312,13 @@ a
 {
   width: 100%;
   min-height: 400px;
-  background-color: var(--blue-100);
+  background: url('/assets/background.png') center center no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
   display: flex;
   align-items: center;
   justify-content: center;
+
 }
 
 .description h2
@@ -358,6 +361,7 @@ a
 {
   width: 100%;
   padding: 0 1rem;
+  background: #01244d;
 }
 
 .timeline .container
@@ -376,6 +380,7 @@ a
   letter-spacing: 4px;
   text-align: center;
   margin-bottom: 3.75rem;
+  color: var(--white);
 }
 
 .timeline .sidebar
@@ -421,27 +426,20 @@ a
 
 .timeline .item:first-child .circle::after
 { 
-  animation: circleExpand 1.5s ease-in-out infinite;
+  animation: circleExpand 1s ease-in-out infinite;
 }
 
 @keyframes circleExpand {
-  0% {
+  0%
+  {
     background-color: var(--blue-300);
-    transform: translate(-50%, -50%) scale(0.2);
+    transform: translate(-50%, -50%) scale(0);
   }
-  60%
+  to
   {
-    transform: translate(-50%, -50%) scale(1.8);
+    transform: translate(-50%, -50%) scale(1.4);
     background-color: var(--white);
-  }
-  80%
-  {
-    background-color: var(--white);
-    transform: translate(-50%, -50%) scale(0.2);
-  }
-  100%
-  {
-    background-color: var(--white);
+    opacity: 0;
   }
 }
 
@@ -546,6 +544,7 @@ a
 .technologies
 {
   width: 100%;
+  background-color: #01244d;
 }
 
 .technologies h2
@@ -554,6 +553,7 @@ a
   font-size: 2.5rem; /* 40px */
   letter-spacing: 4px;
   text-align: center;
+  color: var(--white);
 }
 
 .technologies .carousel
